@@ -1,0 +1,19 @@
+{
+  "name": "symmetric-round",
+  "version": "0.0.1",
+  "description": "A tiny utility function to perform symmetric rounding (a.k.a. \"commercial rounding\") on a number.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiscoNova/symmetric-round.git"
+  },
+  "author": "Markku Post (Uttula)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiscoNova/symmetric-round/issues"
+  },
+  "homepage": "https://github.com/DiscoNova/symmetric-round#readme"
+}
