@@ -1,10 +1,10 @@
 {
   "name": "symmetric-round",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny utility function to perform symmetric rounding (a.k.a. \"commercial rounding\") on a number.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DiscoNova/symmetric-round/issues"
   },
-  "homepage": "https://github.com/DiscoNova/symmetric-round#readme"
+  "homepage": "https://github.com/DiscoNova/symmetric-round#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
 }
