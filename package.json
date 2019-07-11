@@ -2,9 +2,9 @@
   "name": "symmetric-round",
   "version": "0.0.4",
   "description": "A tiny utility function to perform symmetric rounding (a.k.a. \"commercial rounding\") on a number.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint *.js && jest --coverage"
+    "test": "./node_modules/.bin/eslint */*.js && jest --coverage"
   },
   "repository": {
     "type": "git",
