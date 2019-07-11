@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DiscoNova/symmetric-round#readme",
   "devDependencies": {
+    "eslint": "^6.0.1",
     "jest": "^24.8.0"
   }
 }
