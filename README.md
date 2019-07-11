@@ -22,20 +22,31 @@ If your project only "speaks" CommonJS, you can use:
 
 ### Why this package exists?
 
-ECMA-262 defines `Math.round()` in such way that when the input value is exactly half way between two integer Numbers, the result is the Number value that is closer to positive infinity. This means that the absolute value of rounding negative and positive values is asymmetric; for example:
+`Math.round()` - is defined in the latest definition of [ECMA-262](http://www.ecma-international.org/ecma-262/10.0/index.html#sec-math.round) (as well as the earlier versions thereof - at the time of writing) - i.e. "The JavaScript Standard" - in such way that
 
-`Math.round(99.5)` results in `100` while `Math.round(-99.5)` results in `-99` ... and this is just one of the weirdnesses of JavaScript that may sometimes come to bite you in the hindside when you least expect it.
+* when the input value is exactly half way between two integer Numbers, the result is the Number value that is closer to positive infinity.
 
-This leads to all sorts of hard-to-pinpoint bugs like:
+This means that the standard states that the *absolute* value of rounding negative and positive values **is** *asymmetric* by definition; e.g.:
 
-* calculating discount reimbursements may get a different value than what the original discount was
-* drawing charts may be "a pixel off" on the on the negative side of chart origo, etc.
+* `Math.round(99.5)` results in `100` while
+* `Math.round(-99.5)` results in `-99` ... and ...
+ 
+...this is just one of the weirdnesses of JavaScript that may sometimes come to bite you in the hindside when you least expect it.
 
-...and those are just examples of the situations I have personally witnessed. All because `Math.round()` does not work the way I was taught at school back in the day when dinosaurs roamed the Earth.
+In practice - this leads to all sorts of hard-to-pinpoint bugs in your code like:
+
+* calculating discount reimbursements might get a different value than what the original discount was
+* drawing charts *may* be "a pixel off" when they reside on the the negative side of chart origo, etc.
+
+...and those are just examples of the situations I have _personally_ witnessed. All because `Math.round()` does not work the way I was taught at school back in the day when dinosaurs roamed the Earth.
 
 ### So... Let's round numbers symmetrically instead!
 
-This tie-breaking method of rounding is known by many names, such as "round half away from zero", "round half towards nearest infinity", "commercial rounding" or "symmetric rounding". Positive and negative numbers are treated symmetrically and therefore the method is free of overall positive/negative bias (assuming the original numbers are positive or negative with equal probability). This method of rounding is often used for currency conversions and price roundings etc.
+This "tie-breaking method" of rounding Numbers to Integers is known by many names, such as *"round half away from zero"*, *"round half towards nearest infinity"*, *"commercial rounding"* or *"symmetric rounding"*.
+
+With "symmetric rounding", the positive and negative numbers are treated symmetrically and therefore the method is free of overall positive/negative bias (assuming the original numbers are positive or negative with equal probability).
+
+Furthermore, this method of rounding is often used for currency conversions and price roundings etc.
 
 ```js
 import symmetricRound from 'symmetricRound';
@@ -44,7 +55,9 @@ symmetricRound(99.5);  // 100
 symmetricRound(-99.5); // -100
 ```
 
-For input values which round to zero, it must be kept in mind that the output value retains the sign of the input value. While this might *seem* as a blemish, it is a feature caused by the way JavaScript handles Numbers and ... since it actually does retain the symmetricity of rounding I saw no reason to change that behaviour.
+#### Caveats?
+
+For input values which round to "exactly zero", it must be kept in mind that even while using this function, the output value *does* retain the sign of the input value. While this might *seem* as a blemish, it is a feature caused by the way JavaScript handles Numbers and ... since it actually **does** retain the symmetricity of rounding I saw no reason to change that behaviour.
 
 In real life, this is insignificant since:
 
