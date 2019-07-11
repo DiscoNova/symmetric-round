@@ -4,7 +4,23 @@
 
 A tiny utility function to perform symmetric rounding to integer Numbers.
 
-## Why?
+## Install
+
+`npm install --save symmetric-round`
+
+## Use
+
+If your project only "speaks" CommonJS, you can use:
+
+`const symmetricRound = require('symmetricRound');` 
+
+...but if you're transpiling with (or otherwise have) full ES6 support:
+
+`import symmetricRound from 'symmetricRound';'`
+
+...**should** work as well. At the time of writing (July 2019), native full ES6 import/export support on JavaScript-engines was still making its entrance to the JavaScript ergosphere.
+
+### Why this package exists?
 
 ECMA-262 defines `Math.round()` in such way that when the input value is exactly half way between two integer Numbers, the result is the Number value that is closer to positive infinity. This means that the absolute value of rounding negative and positive values is asymmetric; for example:
 
@@ -17,7 +33,7 @@ This leads to all sorts of hard-to-pinpoint bugs like:
 
 ...and those are just examples of the situations I have personally witnessed. All because `Math.round()` does not work the way I was taught at school back in the day when dinosaurs roamed the Earth.
 
-## Let's round numbers symmetrically
+### So... Let's round numbers symmetrically instead!
 
 This tie-breaking method of rounding is known by many names, such as "round half away from zero", "round half towards nearest infinity", "commercial rounding" or "symmetric rounding". Positive and negative numbers are treated symmetrically and therefore the method is free of overall positive/negative bias (assuming the original numbers are positive or negative with equal probability). This method of rounding is often used for currency conversions and price roundings etc.
 
