@@ -1,9 +1,13 @@
 
-const symmetricRound = require('./index.js').default;
-
-expect(symmetricRound).toBeDefined();
+const symmetricRound = require('./index.js');
 
 describe('symmetricRound() is nice because it does', () => {
+
+    test('enable import with require()', () => {
+        expect(symmetricRound).toBeDefined();
+        expect(symmetricRound).toBeInstanceOf(Function);
+        // TODO: Should test ES6 "import xxx from yyy"!?
+    });
 
     test('round numbers symmetrically', () => {
         expect(symmetricRound(0.5)).toBe(1);
