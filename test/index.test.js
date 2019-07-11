@@ -1,5 +1,6 @@
+'use strict';
 
-const symmetricRound = require('./index.js');
+const symmetricRound = require('../src/index.js');
 
 describe('symmetricRound() is nice because it does', () => {
 
