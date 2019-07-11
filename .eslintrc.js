@@ -254,7 +254,7 @@ module.exports = {
         ],
         'strict': [
             'error',
-            'never'
+            'global'
         ],
         'switch-colon-spacing': 'error',
         'symbol-description': 'error',
