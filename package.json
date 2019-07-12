@@ -2,6 +2,18 @@
   "name": "symmetric-round",
   "version": "1.0.2",
   "description": "A tiny utility function to perform symmetric rounding (a.k.a. \"commercial rounding\") on a number.",
+  "keywords": [
+    "commercial",
+    "currency",
+    "decimal",
+    "Integer",
+    "Math.round()",
+    "Number",
+    "price",
+    "round",
+    "rounding",
+    "symmetric"
+  ],
   "main": "src/index.js",
   "scripts": {
     "test": "./node_modules/.bin/eslint */*.js && jest",
