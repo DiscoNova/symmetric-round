@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/DiscoNova/symmetric-round.svg?branch=master)](https://travis-ci.org/DiscoNova/symmetric-round)
 
-A tiny utility function to perform symmetric rounding to integer Numbers.
+A tiny utility function *(like - literally; the function is a one-liner)* to perform symmetric rounding to integer Numbers.
 
 ## Install
 
