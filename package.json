@@ -1,6 +1,6 @@
 {
   "name": "symmetric-round",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny utility function to perform symmetric rounding (a.k.a. \"commercial rounding\") on a number.",
   "main": "src/index.js",
   "scripts": {
