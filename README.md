@@ -1,6 +1,6 @@
 # symmetric-round
 
-[![Build Status](https://travis-ci.org/DiscoNova/symmetric-round.svg?branch=master)](https://travis-ci.org/DiscoNova/symmetric-round)
+[![Build Status](https://travis-ci.org/DiscoNova/symmetric-round.svg?branch=master)](https://travis-ci.org/DiscoNova/symmetric-round) [![Coverage Status](https://coveralls.io/repos/github/DiscoNova/symmetric-round/badge.svg)](https://coveralls.io/github/DiscoNova/symmetric-round)
 
 A tiny utility function *(like - literally; the function is a one-liner)* to perform symmetric rounding to integer Numbers.
 
