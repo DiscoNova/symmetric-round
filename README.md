@@ -16,7 +16,7 @@ If your project only "speaks" CommonJS, you can use:
 
 ...but if you're transpiling with (or otherwise have) full ES6 support:
 
-`import symmetricRound from 'symmetric-round';'`
+`import symmetricRound from 'symmetric-round';`
 
 ...**should** work as well. At the time of writing (July 2019), native full ES6 import/export support on JavaScript-engines was still making its entrance to the JavaScript ergosphere.
 
